@@ -36,8 +36,5 @@ with open(artifactory_metadata_file_path, 'rb') as upload_file:
                         files={'QualiPackage': upload_file})
 
 
-def download_from_artifactory(buildName, buildNumber):
-    artifactory_url = "http://localhost:41411/artifactory/api/archive/buildArtifacts?params=buildName={0}|buildNumber={1}|archiveType=zip".format(
-        buildName, buildNumber)
-    curl_string = 'curl -XPOST -u admin:password -H "Content-Type: application/json"  "{0}" > build.zip'.format(
-        artifactory_url)
+if __name__ == "__main__":
+    main()
