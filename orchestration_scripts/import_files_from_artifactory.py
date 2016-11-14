@@ -1,7 +1,21 @@
 import requests
 import cloudshell.helpers.scripts.cloudshell_scripts_helpers as helpers
 import json
-import shutil
+import paramiko
+import os
+
+
+def scp_copy(host, user, password, local_path, remote_path):
+    ssh = paramiko.SSHClient()
+    ssh.load_system_host_keys()
+    ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+
+    ssh.connect(hostname=host, username=user, password=password, timeout=300)
+    sftp = ssh.open_sftp()
+    sftp.put(local_path, remote_path)
+    sftp.close()
+    ssh.close()
+
 
 
 class ArtifactBuild:
@@ -59,20 +73,21 @@ class Artifactory:
         data = {
             "buildName": buildName.encode(),
             "buildNumber": buildNumber.encode(),
-            "archiveType": "zip"
+            "archiveType": "tar"
         }
 
         headers = {'content-type': 'application/json'}
         response = requests.post(artifactory_url, auth=(self.user, self.password), headers=headers, json=data)
 
-        save_artifacts_archive_to = "c:/demo/{0}.zip".format(reservation_id)
+        file_name = "binaries_for_{0}_{1}.tar".format(buildName,buildNumber)
+        save_artifacts_archive_to = "c:\\demo"
 
-        zfile = open(save_artifacts_archive_to, 'wb')
+        zfile = open(os.path.join(save_artifacts_archive_to, file_name), 'wb')
         zfile.write(response.content)
         zfile.close()
 
         del response
-        return save_artifacts_archive_to
+        return save_artifacts_archive_to, file_name
 
 
 def mock_reservation():
@@ -110,10 +125,15 @@ def populate_build_from_sandbox(build, connectivity, reservation):
 
 def main():
     reservation = helpers.get_reservation_context_details()
-    app_attributes = helpers.get_resource_context_details().attributes
+    app = helpers.get_resource_context_details()
+    app_attributes = app.attributes
     connectivity = helpers.get_connectivity_context_details()
-
     cloudshell = helpers.get_api_session()
+
+
+    resource = helpers.get_resource_context_details_dict()
+    resource['deployedAppData']['attributes'] = {attribute['name']: attribute['value'] for attribute in resource['deployedAppData']['attributes']}
+    resource['deployedAppData']['attributes']['Password'] = cloudshell.DecryptPassword(resource['deployedAppData']['attributes']['Password']).Value
 
     repo = cloudshell.GetResourceDetails(app_attributes["Artifactory Name"])
     repo_attributes = {attribute.Name:attribute.Value for attribute in repo.ResourceAttributes}
@@ -130,9 +150,12 @@ def main():
 
     print '- Found dependencies on Artifactory, associated with build {0} {1}'.format(build.name, build.number)
 
-    file_location = artifactory.download(build.name, build.number, reservation.id)
+    file_location, file_name = artifactory.download(build.name, build.number, reservation.id)
 
-    print '- Downloaded app dependencies to ' + file_location
+    print '- Downloaded app dependencies to ' + os.path.join(file_location, file_name)
+
+    scp_copy(resource['deployedAppData']['address'], resource['deployedAppData']['attributes']['User'], resource['deployedAppData']['attributes']['Password'],
+             os.path.join(file_location, file_name), app_attributes['Target Directory'] + '/' + file_name)
 
 
 
