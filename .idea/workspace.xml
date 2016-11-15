@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf3e22c9-f7c7-4ece-87f7-1f1ff6e68b48" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/orchestration_scripts/requirements.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/orchestration_scripts/import_files_from_artifactory.py" afterPath="$PROJECT_DIR$/orchestration_scripts/import_files_from_artifactory.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jenkins-scripts/upload-file.py" afterPath="$PROJECT_DIR$/jenkins-scripts/upload-file.py" />
     </list>
     <ignored path="artifactory-test.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,6 +29,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="upload-file.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/jenkins-scripts/upload-file.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.18003273">
+              <caret line="13" column="66" selection-start-line="13" selection-start-column="66" selection-end-line="13" selection-end-column="66" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="driver.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/artifactory-shell/src/driver.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -43,11 +51,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="import_files_from_artifactory.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="import_files_from_artifactory.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/orchestration_scripts/import_files_from_artifactory.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6121113">
-              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="109" column="58" selection-start-line="109" selection-start-column="58" selection-end-line="109" selection-end-column="58" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -115,16 +123,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="decoder.py" pinned="false" current-in-tab="false">
-        <entry file="file://C:/ProgramData/QualiSystems/QsPython27/Lib/json/decoder.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="365" column="56" selection-start-line="365" selection-start-column="56" selection-end-line="365" selection-end-column="56" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="api.py" pinned="false" current-in-tab="false">
         <entry file="file://C:/ProgramData/QualiSystems/QsPython27/Lib/site-packages/requests/api.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -150,11 +148,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/jenkins-scripts/upload-file.py" />
         <option value="$PROJECT_DIR$/orchestration_scripts/drivermetadata.xml" />
         <option value="$PROJECT_DIR$/orchestration_scripts/silly_test.py" />
         <option value="$PROJECT_DIR$/orchestration_scripts/requirements.txt" />
         <option value="$PROJECT_DIR$/orchestration_scripts/import_files_from_artifactory.py" />
+        <option value="$PROJECT_DIR$/jenkins-scripts/upload-file.py" />
       </list>
     </option>
   </component>
@@ -705,16 +703,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jenkins-scripts/upload-file.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23577236">
-          <caret line="39" column="10" selection-start-line="39" selection-start-column="10" selection-end-line="39" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#15#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/artifactory-shell/src/driver.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -773,14 +761,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/orchestration_scripts/silly_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/orchestration_scripts/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -789,13 +769,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/orchestration_scripts/silly_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/orchestration_scripts/import_files_from_artifactory.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6121113">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="109" column="58" selection-start-line="109" selection-start-column="58" selection-end-line="109" selection-end-column="58" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jenkins-scripts/upload-file.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.18003273">
+          <caret line="13" column="66" selection-start-line="13" selection-start-column="66" selection-end-line="13" selection-end-column="66" />
+          <folding />
         </state>
       </provider>
     </entry>
