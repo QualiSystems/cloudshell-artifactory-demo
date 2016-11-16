@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf3e22c9-f7c7-4ece-87f7-1f1ff6e68b48" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/orchestration_scripts/orchestration_scripts.zip" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/orchestration_scripts/requirements.txt" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jenkins-scripts/upload-file.py" afterPath="$PROJECT_DIR$/jenkins-scripts/upload-file.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/orchestration_scripts/import_files_from_artifactory.py" afterPath="$PROJECT_DIR$/orchestration_scripts/import_files_from_artifactory.py" />
     </list>
     <ignored path="artifactory-test.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,9 +36,11 @@
       <file leaf-file-name="upload-file.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/jenkins-scripts/upload-file.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.18003273">
-              <caret line="13" column="66" selection-start-line="13" selection-start-column="66" selection-end-line="13" selection-end-column="66" />
-              <folding />
+            <state vertical-scroll-proportion="0.19512194">
+              <caret line="8" column="97" selection-start-line="8" selection-start-column="97" selection-end-line="8" selection-end-column="97" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -54,21 +60,12 @@
       <file leaf-file-name="import_files_from_artifactory.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/orchestration_scripts/import_files_from_artifactory.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="109" column="58" selection-start-line="109" selection-start-column="58" selection-end-line="109" selection-end-column="58" />
+            <state vertical-scroll-proportion="-16.413794">
+              <caret line="155" column="41" selection-start-line="155" selection-start-column="41" selection-end-line="155" selection-end-column="41" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
+                <element signature="e#530#942#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="requirements.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/orchestration_scripts/requirements.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="1" column="15" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -162,10 +159,10 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="54" />
+    <option name="x" value="55" />
     <option name="y" value="-8" />
-    <option name="width" value="1874" />
-    <option name="height" value="1084" />
+    <option name="width" value="1873" />
+    <option name="height" value="1092" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -590,18 +587,18 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="54" y="-8" width="1874" height="1084" extended-state="0" />
+    <frame x="55" y="-8" width="1873" height="1092" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32878152" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32846716" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10253583" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10259239" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32492113" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3280757" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.11991658" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -641,6 +638,7 @@
           <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#530#942#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -674,7 +672,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#15#0" expanded="false" />
+            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -761,14 +759,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/orchestration_scripts/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="15" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/orchestration_scripts/silly_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -779,19 +769,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/orchestration_scripts/import_files_from_artifactory.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="109" column="58" selection-start-line="109" selection-start-column="58" selection-end-line="109" selection-end-column="58" />
+        <state vertical-scroll-proportion="-16.413794">
+          <caret line="155" column="41" selection-start-line="155" selection-start-column="41" selection-end-line="155" selection-end-column="41" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#530#942#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jenkins-scripts/upload-file.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.18003273">
-          <caret line="13" column="66" selection-start-line="13" selection-start-column="66" selection-end-line="13" selection-end-column="66" />
-          <folding />
+        <state vertical-scroll-proportion="0.19512194">
+          <caret line="8" column="97" selection-start-line="8" selection-start-column="97" selection-end-line="8" selection-end-column="97" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
