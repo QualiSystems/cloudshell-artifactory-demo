@@ -71,7 +71,8 @@ class Artifactory:
 
     def download(self, buildName, buildNumber):
         file_name = "binaries_for_{0}_{1}.tar".format(buildName, buildNumber)
-        save_artifacts_archive_to = "c:\\demo"
+
+        save_artifacts_archive_to = os.getcwd()
 
         artifactory_url = "http://{0}:{1}/artifactory/api/archive/buildArtifacts".format(self.host, self.port)
         data = {
@@ -93,14 +94,14 @@ class Artifactory:
         return save_artifacts_archive_to, file_name
 
 
-def mock_reservation():
-    global reservation
-
+def mock_reservation(id, domain):
     class Object(object):
         pass
 
     reservation = Object()
-    reservation.id = '115b6d9f-f736-4682-bbc5-eba535520568'
+    reservation.id = id
+    reservation.domain = domain
+    return reservation
 
 
 def populate_build_from_sandbox(connectivity, reservation, msg):
