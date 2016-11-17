@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/orchestration_scripts/silly_test.py" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="bf3e22c9-f7c7-4ece-87f7-1f1ff6e68b48" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/orchestration_scripts/import_files_from_artifactory.py" afterPath="$PROJECT_DIR$/orchestration_scripts/import_files_from_artifactory.py" />
@@ -17,7 +20,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/artifactory-test$silly_test.coverage" NAME="silly_test Coverage Results" MODIFIED="1479301555891" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/orchestration_scripts" />
+    <SUITE FILE_PATH="coverage/artifactory-test$silly_test.coverage" NAME="silly_test Coverage Results" MODIFIED="1479316932664" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/orchestration_scripts" />
     <SUITE FILE_PATH="coverage/artifactory-test$upload_file.coverage" NAME="upload-file Coverage Results" MODIFIED="1478687589716" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="c:/" />
     <SUITE FILE_PATH="coverage/artifactory-test$import_files_from_artifactory.coverage" NAME="import_files_from_artifactory Coverage Results" MODIFIED="1478709442812" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/orchestration_scripts" />
   </component>
@@ -57,11 +60,11 @@
       <file leaf-file-name="import_files_from_artifactory.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/orchestration_scripts/import_files_from_artifactory.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.50332594">
-              <caret line="137" column="59" selection-start-line="137" selection-start-column="59" selection-end-line="137" selection-end-column="59" />
+            <state vertical-scroll-proportion="0.9541446">
+              <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
-                <element signature="e#530#942#0" expanded="false" />
+                <element signature="e#1075#1487#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -71,11 +74,20 @@
         <entry file="file://$PROJECT_DIR$/orchestration_scripts/silly_test.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="17" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
-              <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+              <caret line="29" column="82" selection-start-line="29" selection-start-column="82" selection-end-line="29" selection-end-column="83" />
               <folding>
                 <element signature="e#353#367#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sftp_client.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../trunk/Drop/TestShell/ExecutionServer/python/2.7.10/Lib/site-packages/paramiko/sftp_client.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="704" column="0" selection-start-line="704" selection-start-column="0" selection-end-line="704" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -159,10 +171,10 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="55" />
+    <option name="x" value="1912" />
     <option name="y" value="-8" />
-    <option name="width" value="1873" />
-    <option name="height" value="1092" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -587,16 +599,16 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="55" y="-8" width="1873" height="1092" extended-state="1" />
+    <frame x="1912" y="-8" width="1936" height="1056" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32846716" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10259239" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32429615" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.09914712" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32394367" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.11991658" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
@@ -625,11 +637,26 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/orchestration_scripts/import_files_from_artifactory.py</url>
-          <line>114</line>
+          <line>124</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/orchestration_scripts/silly_test.py</url>
+          <line>32</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/orchestration_scripts/silly_test.py</url>
+          <line>31</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/orchestration_scripts/import_files_from_artifactory.py</url>
+          <line>22</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="6" />
+      <option name="time" value="9" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -650,7 +677,7 @@
           <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
-            <element signature="e#530#942#0" expanded="false" />
+            <element signature="e#1075#1487#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -781,11 +808,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../../trunk/Drop/TestShell/ExecutionServer/python/2.7.10/Lib/site-packages/paramiko/sftp_client.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="704" column="0" selection-start-line="704" selection-start-column="0" selection-end-line="704" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/orchestration_scripts/silly_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="17" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
-          <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+          <caret line="29" column="82" selection-start-line="29" selection-start-column="82" selection-end-line="29" selection-end-column="83" />
           <folding>
             <element signature="e#353#367#0" expanded="true" />
           </folding>
@@ -794,11 +828,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/orchestration_scripts/import_files_from_artifactory.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.50332594">
-          <caret line="137" column="59" selection-start-line="137" selection-start-column="59" selection-end-line="137" selection-end-column="59" />
+        <state vertical-scroll-proportion="0.9541446">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
-            <element signature="e#530#942#0" expanded="false" />
+            <element signature="e#1075#1487#0" expanded="false" />
           </folding>
         </state>
       </provider>

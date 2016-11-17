@@ -6,7 +6,7 @@ import os
 import time
 
 
-def scp_copy(host, user, password, local_path, remote_path):
+def install_package(host, user, password, local_path, remote_path):
     ssh = paramiko.SSHClient()
     ssh.load_system_host_keys()
     ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
@@ -14,6 +14,16 @@ def scp_copy(host, user, password, local_path, remote_path):
     ssh.connect(hostname=host, username=user, password=password, timeout=300)
     sftp = ssh.open_sftp()
     sftp.put(local_path, remote_path)
+    stdin, stdout, sterr = ssh.exec_command("yum -y install wget")
+    stdout.readlines()
+    stdin, stdout, sterr = ssh.exec_command("wget https://bootstrap.pypa.io/get-pip.py")
+    stdout.readlines()
+    stdin, stdout, sterr = ssh.exec_command("python get-pip.py")
+    stdout.readlines()
+    stdin, stdout, sterr = ssh.exec_command("tar -xvf {0} > filename".format(remote_path))
+    stdout.readlines()
+    stdin, stdout, sterr = ssh.exec_command("python -m pip install $(cat filename)".format(remote_path))
+    print stdout.readlines()
     sftp.close()
     ssh.close()
 
@@ -165,8 +175,8 @@ def main():
 
     msg('- Downloaded app dependencies to Execution Server at ' + os.path.join(file_location, file_name))
 
-    scp_copy(resource['deployedAppData']['address'], resource['deployedAppData']['attributes']['User'], resource['deployedAppData']['attributes']['Password'],
-             os.path.join(file_location, file_name), app_attributes['Target Directory'] + '/' + file_name)
+    install_package(resource['deployedAppData']['address'], resource['deployedAppData']['attributes']['User'], resource['deployedAppData']['attributes']['Password'],
+                    os.path.join(file_location, file_name), app_attributes['Target Directory'] + '/' + file_name)
 
     msg('- Copied binaries to app server at ' + app_attributes['Target Directory'] + '/' + file_name)
 

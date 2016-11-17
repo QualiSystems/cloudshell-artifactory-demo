@@ -1,7 +1,0 @@
-<Driver Description="Describe the purpose of your CloudShell shell" MainClass="driver.ArtifactoryShellDriver" Name="ArtifactoryShellDriver" Version="1.0.0">
-    <Layout>
-        <Category Name="App Management">
-            <Command Description="" DisplayName="Method One" Name="method_one" />
-        </Category>
-    </Layout>
-</Driver>
