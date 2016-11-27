@@ -14,5 +14,5 @@ def get_files(path='./'):
 def home(request):
     context = {'title': 'Sample Web App',
                'subtitle': 'Version {0}'.format(VERSION),
-               'body': list(get_files())}
+               'body': list(get_files('./cloudshell-artifactory-demo'))}
     return render(request, 'main/home.html', context)

@@ -25,7 +25,7 @@ def install_package(host, user, password, local_path, remote_path):
     stdout.readlines()
     stdin, stdout, sterr = ssh.exec_command("tar -xvf {0} > filename".format(remote_path))
     stdout.readlines()
-    stdin, stdout, sterr = ssh.exec_command("tar -xvf cloudshell-artifactory-demo/demo.tar -C /root > filename")
+    stdin, stdout, sterr = ssh.exec_command("tar -xvf cloudshell-artifactory-demo/cloudshell-artifactory-demo.tar -C /root > filename")
     stdout.readlines()
     stdin, stdout, sterr = ssh.exec_command("python ./cloudshell-artifactory-demo/demowebapp/manage.py runserver 0.0.0.0:8080")
     print stdout.readlines()
