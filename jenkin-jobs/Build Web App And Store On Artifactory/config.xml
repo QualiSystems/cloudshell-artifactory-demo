@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<flow-definition plugin="workflow-job@2.8">
+  <actions/>
+  <description></description>
+  <displayName>Build Web App And Store On Artifactory</displayName>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <org.jenkinsci.plugins.workflow.job.properties.PipelineTriggersJobProperty>
+      <triggers/>
+    </org.jenkinsci.plugins.workflow.job.properties.PipelineTriggersJobProperty>
+  </properties>
+  <definition class="org.jenkinsci.plugins.workflow.cps.CpsFlowDefinition" plugin="workflow-cps@2.23">
+    <script>node {
+    stage(&apos;Build&apos;){
+        try{
+            echo &quot;pwd()&quot;
+            sh &quot;git clone https://github.com/QualiSystems/cloudshell-artifactory-demo&quot;
+            sh &quot;echo VERSION = &apos;${BUILD_NUMBER}&apos; &gt; cloudshell-artifactory-demo/demowebapp/main/version.py&quot;
+            sh &quot;tar -cvf cloudshell-artifactory-demo.tar cloudshell-artifactory-demo/&quot;
+            def server = Artifactory.server(&apos;ArtifactoryDemo&apos;)
+            def uploadSpec = &quot;&quot;&quot;{
+            &quot;files&quot;: [
+                    {
+                      &quot;pattern&quot;: &quot;cloudshell-artifactory-demo.tar&quot;,
+                      &quot;target&quot;: &quot;libs-snapshot-local/&quot;,
+                      &quot;recursive&quot;: &quot;true&quot;,
+                      &quot;flat&quot;: &quot;false&quot;
+                    }
+                ]
+            }&quot;&quot;&quot;
+            def buildInfo = server.upload(uploadSpec)
+        
+            server.publishBuildInfo buildInfo
+            
+            def build_name = buildInfo.getName()
+            def build_number = buildInfo.getNumber()
+            
+            build job: &apos;Test Web App On Cloudshell Sandbox&apos;, parameters: [[$class: &apos;StringParameterValue&apos;, name: &apos;buildName&apos;, value: build_name], [$class: &apos;StringParameterValue&apos;, name: &apos;buildNumber&apos;, value: build_number]]
+        }
+        finally {
+            deleteDir()
+        }
+    }
+}</script>
+    <sandbox>true</sandbox>
+  </definition>
+  <triggers/>
+</flow-definition>

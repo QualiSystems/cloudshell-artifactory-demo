@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <hudson.model.StringParameterDefinition>
+          <name>buildName</name>
+          <description></description>
+          <defaultValue></defaultValue>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>buildNumber</name>
+          <description></description>
+          <defaultValue></defaultValue>
+        </hudson.model.StringParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+  </properties>
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@3.0.0">
+    <configVersion>2</configVersion>
+    <userRemoteConfigs>
+      <hudson.plugins.git.UserRemoteConfig>
+        <url>https://github.com/nahumtimerman/artifactory-test.git</url>
+      </hudson.plugins.git.UserRemoteConfig>
+    </userRemoteConfigs>
+    <branches>
+      <hudson.plugins.git.BranchSpec>
+        <name>*/master</name>
+      </hudson.plugins.git.BranchSpec>
+    </branches>
+    <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+    <submoduleCfg class="list"/>
+    <extensions/>
+  </scm>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <org.jenkinsci.plugins.cloudshell.CloudShellConfig plugin="cloudshell@1.5.1">
+      <buildStep class="org.jenkinsci.plugins.cloudshell.builders.StartSandbox">
+        <blueprintName>Artifactory Prototype Demonstration</blueprintName>
+        <sandboxDuration>120</sandboxDuration>
+        <maxWaitForSandboxAvailability>10</maxWaitForSandboxAvailability>
+      </buildStep>
+    </org.jenkinsci.plugins.cloudshell.CloudShellConfig>
+    <hudson.tasks.Shell>
+      <command>cloudshell_server=&quot;192.168.73.152&quot;
+echo &quot;{\&quot;buildName\&quot;: \&quot;$buildName\&quot;, \&quot;buildNumber\&quot;: \&quot;$buildNumber\&quot;}&quot; &gt; artifactory-metadata
+python jenkins-scripts/upload-file.py $SANDBOX_ID artifactory-metadata $cloudshell_server</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers/>
+  <buildWrappers/>
+</project>
